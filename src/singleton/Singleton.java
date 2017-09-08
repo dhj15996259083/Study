@@ -22,7 +22,7 @@ public class Singleton {
         if(ins == null) {
             synchronized (Singleton.class){
                 if(ins == null){
-                    // 2,3指令重排会造成问题
+                    // (2),(3)指令重排会造成问题
                     // mem = malloc();   (1)
                     // ins = mem;        (2)
                     // Singleton(ins);   (3)
