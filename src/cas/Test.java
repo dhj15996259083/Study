@@ -16,6 +16,8 @@ public class Test {
 
 
 class TestSon extends Test{
+
+
     public TestSon(String test) {
         super(test);
         System.out.println("son 1");
