@@ -5,4 +5,6 @@ package proxyTest;
  */
 public interface ProxyInterface {
     public String execute();
+
+    public String execute0();
 }

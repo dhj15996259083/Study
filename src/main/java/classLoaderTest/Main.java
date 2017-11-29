@@ -15,13 +15,14 @@ public class Main {
         URL url = new URL("file:/Users/daihuijun/IdeaProjects/Study/temp/");
         URLClassLoader classLoader = new MyClassLoader(new URL[]{url});
         try {
+            Thread.currentThread().setContextClassLoader(classLoader);
             System.out.println("MyClassLoader测试：");
             Class<?> clazz = classLoader.loadClass("classLoaderTest.TestClass");
             Object o = clazz.newInstance();
             Method method = o.getClass().getMethod("getMain", null);
             Main main = (Main) method.invoke(o, null);
 
-            System.out.println(main.getClass().getClassLoader());
+            System.out.println(o.getClass().getClassLoader());
             System.out.println(main.getName().getClass().getClassLoader());
         } catch (Exception e) {
             e.printStackTrace();

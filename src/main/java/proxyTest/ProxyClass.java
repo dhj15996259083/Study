@@ -6,6 +6,11 @@ package proxyTest;
 public class ProxyClass implements  ProxyInterface{
     @Override
     public String execute() {
-        return "ProxyClass.execute";
+        return execute0();
+    }
+
+    @Override
+    public String execute0() {
+        return "ProxyClass.execute0";
     }
 }

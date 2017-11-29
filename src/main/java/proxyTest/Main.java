@@ -1,5 +1,7 @@
 package proxyTest;
 
+import sun.reflect.Reflection;
+
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -59,5 +61,8 @@ if(negative){
 
         ProxyInterface proxyInterface = (ProxyInterface)ProxyFactory.createProxyFactory(new ProxyClass());
         System.out.println(proxyInterface.execute());
+
+        ProxyInterface proxyInterfaceByCglib = (ProxyInterface)ProxyFactory.createProxyFactoryByCGLib(new ProxyClass());
+        System.out.println(proxyInterfaceByCglib.execute());
     }
 }
