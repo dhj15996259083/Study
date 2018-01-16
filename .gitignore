@@ -1,5 +1,4 @@
 *.iml
 .idea/*
-*/dependency-reduced-pom.xml
 */.DS_Store
-Study/target/*
+target/*
