@@ -31,13 +31,14 @@ public class Game {
     }
 
     public void start() {
-        sender.send(players, sender.rank(this.cards));
+        sender.rank(cards);
+        sender.send(players, cards);
         for (Player player : players) {
             player.showCards();
         }
     }
 
     public static void main(String[] args) {
-        new Game(3, 2).start();
+        new Game(2, 1).start();
     }
 }
