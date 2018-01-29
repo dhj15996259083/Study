@@ -39,6 +39,6 @@ public class Game {
     }
 
     public static void main(String[] args) {
-        new Game(2, 1).start();
+        new Game(4, 1).start();
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Poker {
     static final String[] specialCards = new String[]{"大王", "小王"};
-    static final String[] types = new String[]{"红桃", "方片", "梅花", "黑桃"};
+    static final String[] types = new String[]{"♥️", "♦️", "♣️", "♠️"};
     static final String[] numbers = new String[]{"3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K","A","2"};
     private static List<String> cards;
 
